@@ -25,6 +25,10 @@ def add_message():
     messages.append(Message(text, tag))
     return redirect(url_for('main'))
 
+@app.route('/registr', methods=['GET'])
+def registration():
+    return render_template('registration.html')
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=3000)
